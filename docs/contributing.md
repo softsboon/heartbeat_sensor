@@ -11,12 +11,52 @@ Cum se poate contribui la proiect:
 1. Creezi un cont pe github daca nu ai unul.
 2. Trimiti o cerere de access la proiect la adresa: sotsboon@gmail.com cu adresa de email folosita pentru contul de github
 3. Dupa acceptarea cererii intri in contul de github si accesezi repositoriului de proiect https://github.com/softsboon/heartbeat_sensor
-4. In partea dreapta sus apesi butonul de "Fork" si creezi o copie a repositoriului in contul tau.
-5. checkout forked repository
-6. update from master
-7. make changes to the code/doc
-8. commit changes
-9. push changes
-10. create a pull request
-11. merge pull request
-...
+4. Creeaza un "Fork"
+In pagina de Github a repositoriului de proiect se foloseste butonul "Fork" pentru a crea o copie a repositoriului in contul de Github al contributorului.
+5. Creeaza o copie locala a proiectului: din pagina repositoriului nou creat, in contul personal de Github, se copiaza url-ul pentru clonarea repositoriului (in general se foloseste link-ul de ssh dar este ok si cel de http)
+```sh
+git clone git@github.com:USERNAME/FORKED-PROJECT.git
+```
+6. Adauga link la repo-ul original: din interiorul folderului in care am facut copia locala se adauga o referinta catre repo-ul original (cel din care am facut fork)
+```
+git remote add upstream https://github.com/UPSTREAM-USER/ORIGINAL-PROJECT.git
+```
+pentru a verifica daca s-a adaugat aceasta referinta putem folosi comanda
+```
+git remote -v
+```
+7. Actualizeaza repo-ul local cu modificarile de pe "upstream": Inainte de a incepe lucrul, trebuie aduse toate modificarile din repo-ul original pentru a lucra pe ultima varianta de cod (acest lucru se va face si inainte de a  trimite modificarile din repo-ul local in repo-ul fork-uit)
+```
+git fetch upstream 
+git merge upstream/master
+```
+8. Add changes to the local repo
+```
+git add NUME_FISIER
+```
+sau 
+```
+git add . # adauga toate modificarile (staging)
+```
+9. Salveaza modificarile in repo-ul local
+```
+git commit -m "Fix issue #123" 
+```
+10. Actualizeaza repo-ul de pe server: trimite modificarile in repo-ul din contul personal de pe Github
+```
+git push 
+```
+11. Create a pull request
+    - In pagina de repo din contul de github foloseste butonul de "New pull request"
+    - completeti campul de descriere: "Fixed issue #123" si eventual adaugati o descrire a modificarilor.
+    - Click pe butonul "Create pull request"
+    - Click pe butonul "Merge pull request" (daca sunt conflicte nu va fi activ!)
+
+
+Refs
+
+* https://www.youtube.com/watch?v=8UguQzmswC4
+* https://medium.com/@swinkler/git-workflow-explained-a-step-by-step-guide-83c1c9247f03
+* https://reflectoring.io/github-fork-and-pull/
+* https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow
+
