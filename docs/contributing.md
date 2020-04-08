@@ -68,7 +68,15 @@ git push
 9. Nu mai trebuie adaugat link-ul catre repositoriul "upstream" deoarece aplicatia detecteaza daca este vorba de un fork si seteaza acest link automat.
 10. Apasa butonul "Fetch origin" pentru a aduce toate modificarile din "softsboon/heartbeat_sensor" in repositoriul local.
 11. Adauga fisiere/Modifica fisiere existente la proiect.
-12. 
+12. Deschideti GitHub Desktop si in partea din stanga sus vei gasi lista cu fisierele modificate/adaugate. In partea din stanga jos poti scrie descrierea scurta pentru commit si eventual si o detaliere a modificarilor facute. Apasa commit pentru a salva modificarile in repo-ul local.
+13. Pentru a trimite modificarile catre repo-ul din contul tau de GitHub foloseste butonul "Push origin"
+14. Foloseste optiunea "Create pull request" din meniul "Branch" care iti va deschide repositoriul de pe GitHub in browser.
+15. Create a pull request
+    - In pagina de repo din contul de github foloseste butonul de "Create pull request"
+    - completeaza campul de descriere: "Fixed issue #123" si eventual adaugati o descrire detaliata a modificarilor.
+    - Click pe butonul "Create pull request"
+    - Click pe butonul "Merge pull request" (daca sunt conflicte nu va fi activ!)
+ 
 ---
 Refs
 
